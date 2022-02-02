@@ -41,7 +41,6 @@ class Page{
 
 		return $this->tpl->draw($name, $returnHTML);
 
-
 	}
 
 
