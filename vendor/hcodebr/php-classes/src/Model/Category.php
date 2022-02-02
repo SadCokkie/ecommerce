@@ -6,12 +6,7 @@ use \Hcode\DB\Sql;
 use \Hcode\Model;
 use \Hcode\Mailer;
 class Category extends Model{
-
-	const SESSION = "User";
-	const SECRET = "HcodePhp7_Secret";
-	const SECRET_IV = "HcodePhp7_Secret_IV";
-
-
+	
 	public static function listAll()
 	{
 		$sql = new Sql();
@@ -30,6 +25,8 @@ class Category extends Model{
 		));
 
 		$this->setData($results[0]);
+
+		Category::updateFile();
 	}
 
 	public function get($idcategory)
@@ -50,6 +47,23 @@ class Category extends Model{
 		$sql->query("DELETE FROM tb_categories WHERE idcategory = :idcategory",[
 			":idcategory"=>$this->getidcategory()
 		]);
+
+		Category::updateFile();
+
+	}
+
+	public static function updateFile()
+	{
+
+		$categories = Category::listAll();
+
+		$html = [];
+
+		foreach ($categories as $row) {
+			array_push($html, '<li><a href="/category/'.$row['idcategory'].'">'.$row['descategory'].'</a></li>');
+		}
+
+		file_put_contents($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . "views". DIRECTORY_SEPARATOR. "category-menu.html", implode('', $html));
 	}
 
 }
