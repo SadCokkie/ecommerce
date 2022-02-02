@@ -23,7 +23,7 @@ class Page{
 			"tpl_dir"       => $_SERVER["DOCUMENT_ROOT"].$tpl_dir,
 			"cache_dir"     => $_SERVER["DOCUMENT_ROOT"]."/views-cache/",
 			"debug"         => false 
-				   );
+		);
 		Tpl::configure($config);
 
 		$this->tpl = new Tpl;
@@ -46,9 +46,13 @@ class Page{
 
 
 	private function setData($data = array()){
+
 		foreach ($data as $key => $value) {
-			$this->tpl->assign($key,$value);
+
+			$this->tpl->assign($key, $value);
+
 		}
+
 	}
 
 	public function __destruct()
@@ -60,4 +64,4 @@ class Page{
 
 }
 
- ?>
+?>
