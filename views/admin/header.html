@@ -4,6 +4,7 @@ This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
 -->
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,10 +23,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
         page. However, you can choose any other skin. Make sure you
         apply the skin class to the body tag so the changes take effect.
       -->
-      <link rel="stylesheet" href="/res/admin/dist/css/skins/skin-blue.min.css">
+  <link rel="stylesheet" href="/res/admin/dist/css/skins/skin-blue.min.css">
 
-      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -51,6 +52,7 @@ desired effect
 |               | sidebar-mini                            |
 |---------------------------------------------------------|
 -->
+
 <body class="hold-transition skin-blue sidebar-mini">
   <div class="wrapper">
 
@@ -58,7 +60,7 @@ desired effect
     <header class="main-header">
 
       <!-- Logo -->
-      <a href="index2.html" class="logo">
+      <a href="http://localhost/admin" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini"><b>A</b>LT</span>
         <!-- logo for regular state and mobile devices -->
@@ -86,7 +88,8 @@ desired effect
                 <li>
                   <!-- inner menu: contains the messages -->
                   <ul class="menu">
-                    <li><!-- start message -->
+                    <li>
+                      <!-- start message -->
                       <a href="#">
                         <div class="pull-left">
                           <!-- User Image -->
@@ -122,7 +125,8 @@ desired effect
                 <li>
                   <!-- Inner Menu: contains the notifications -->
                   <ul class="menu">
-                    <li><!-- start notification -->
+                    <li>
+                      <!-- start notification -->
                       <a href="#">
                         <i class="fa fa-users text-aqua"></i> 5 new members joined today
                       </a>
@@ -145,7 +149,8 @@ desired effect
                 <li>
                   <!-- Inner menu: contains the tasks -->
                   <ul class="menu">
-                    <li><!-- Task item -->
+                    <li>
+                      <!-- Task item -->
                       <a href="#">
                         <!-- Task title and progress text -->
                         <h3>
@@ -155,7 +160,8 @@ desired effect
                         <!-- The progress bar -->
                         <div class="progress xs">
                           <!-- Change the css width attribute to simulate progress -->
-                          <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar"
+                            aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                             <span class="sr-only">20% Complete</span>
                           </div>
                         </div>
@@ -174,14 +180,14 @@ desired effect
               <!-- Menu Toggle Button -->
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <!-- The user image in the navbar-->
-                <img src="res/admin/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                <img src="/res/admin/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
                 <!-- hidden-xs hides the username on small devices so only the image appears. -->
                 <span class="hidden-xs">Alexander Pierce</span>
               </a>
               <ul class="dropdown-menu">
                 <!-- The user image in the menu -->
                 <li class="user-header">
-                  <img src="res/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                  <img src="/res/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                   <p>
                     Alexander Pierce - Web Developer
@@ -231,7 +237,7 @@ desired effect
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel">
           <div class="pull-left image">
-            <img src="res/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+            <img src="/res/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
           </div>
           <div class="pull-left info">
             <p>Alexander Pierce</p>
