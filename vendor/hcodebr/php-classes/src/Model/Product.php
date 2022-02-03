@@ -75,9 +75,9 @@ class Product extends Model{
 			"products".DIRECTORY_SEPARATOR.
 			$this->getidproduct(). ".jpg")){
 
-			$url = "res/site/img/products/". $this->getidproduct(). ".jpg";
+			$url = "/res/site/img/products/". $this->getidproduct(). ".jpg";
 		}else{
-			$url = "res/site/img/product.jpg";
+			$url = "/res/site/img/product.jpg";
 		}
 
 		return $this->setdesphoto($url);
