@@ -52,6 +52,7 @@ class Product extends Model{
 			":idproduct"=>$idproduct
 		]);
 
+		// var_dump($results);
 		$this->setData($results[0]);
 	}
 
