@@ -21,7 +21,7 @@ $app->get('/admin/login', function() {
 	]);
 
 	$page->setTpl("login");
-
+	exit;
 });
 
 $app->post('/admin/login', function() {
