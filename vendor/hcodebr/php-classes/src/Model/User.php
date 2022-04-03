@@ -94,16 +94,11 @@ class User extends Model{
 	{
 
 		if (!User::checkLogin($inadmin)) {
-
-			if($inadmin){
-			
+			if($inadmin){	
 			header("Location: /admin/login");
-
-		}else{
-			
+			}else{
 			header("Location: /login");
-			
-		}
+			}
 		exit;
 		}
 	}
@@ -330,6 +325,25 @@ class User extends Model{
 		return password_hash($password, PASSWORD_DEFAULT, [
 			'cost'=>12
 		]);
+	}
+
+	public static function setErrorRegister($msg)
+	{
+		$_SESSION[User::ERROR_REGISTER] = $msg;
+	}
+
+	public static function getErrorRegister()
+	{
+		$msg = (isset($_SESSION[User::ERROR_REGISTER]) && $_SESSION[User::ERROR_REGISTER]) ? $_SESSION[User::ERROR_REGISTER] : '';
+
+		User::clearErrorRegister();
+
+		return $msg;
+	}
+
+	public static function clearErrorRegister()
+	{
+		$_SESSION[User::ERROR_REGISTER] = NULL;
 	}
 }
 
